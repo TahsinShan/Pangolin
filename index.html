@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pangolin | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" class="logo-link">Pangolin</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html#sendmoney">Send Money</a></li>
+            <li><a href="services.html#cashout">Cash Out</a></li>
+            <li><a href="services.html#recharge">Mobile Recharge</a></li>
+            <li><a href="services.html#emi">EMI Payment</a></li>
+            <li><a href="services.html#addmoney">Add Money</a></li>
+            <li><a href="services.html#billpay">Bill Pay</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="contact-link">Contact Us</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+
+<main id="hero">
+
+  <!-- HERO IMAGE SECTION -->
+  <section class="hero-image">
+    <div class="hero-content">
+      <h1>Smart Money Moves</h1>
+      <p>Send Money, Pay Bills, Recharge Mobiles, and manage your finances with Pangolin.</p>
+      <a href="#services" class="cta-button">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- SLIDER SECTION -->
+  <section class="hero-slider">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('assets/slider1.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/slider2.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/slider3.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/slider4.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/slider5.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/slider6.jpg');"></div>
+    </div>
+  </section>
+
+ <!-- CORE SERVICES -->
+<section id="services" class="core-services">
+  <h2>Our Core Services</h2>
+  <div class="service-cards">
+    <a href="services.html#sendmoney" class="service-card">Send Money</a>
+    <a href="services.html#cashout" class="service-card">Cash Out</a>
+    <a href="services.html#recharge" class="service-card">Mobile Recharge</a>
+    <a href="services.html#sendmoney" class="service-card">Transfer Money</a>
+    <a href="services.html#emi" class="service-card">EMI Payment</a>
+    <a href="services.html#addmoney" class="service-card">Add Money</a>
+    <a href="services.html#billpay" class="service-card">Bill Pay</a>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Pangolin. All rights reserved.</p>
+</footer>
+
+<!-- CHATBOT -->
+<div id="chatbot">
+  <button id="chatToggle" onclick="toggleChat()">💬 Rollie</button>
+  <div id="chatbox">
+    <div id="messages"></div>
+    <input type="text" id="userInput" placeholder="Ask Rollie anything...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangolin | Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" class="logo-link">Pangolin</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html#sendmoney">Send Money</a></li>
+            <li><a href="services.html#cashout">Cash Out</a></li>
+            <li><a href="services.html#recharge">Mobile Recharge</a></li>
+            <li><a href="services.html#emi">EMI Payment</a></li>
+            <li><a href="services.html#addmoney">Add Money</a></li>
+            <li><a href="services.html#billpay">Bill Pay</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="contact-link" class="active">Contact Us</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+
+<section class="contact-section">
+    <h2>Need More Help?</h2>
+    <div class="contact-cards">
+        <div class="contact-card">
+            <h3>Text Us</h3>
+            <p>Message and data rates may apply</p>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMSclsvTfFMDjwDHwfrfzHvrqtZSJpLXDVqPMvWqcCmlKrcKzcjRTnFvFVCZMhnMMqJhWJD">Text Us</a>
+        </div>
+        <div class="contact-card">
+            <h3>Chat with a Specialist</h3>
+            <p>Available 7am–11pm CT, 7 days a week</p>
+            <a href="#">Chat Now</a>
+        </div>
+        <div class="contact-card">
+            <h3>Call Us</h3>
+            <p>Available 7am–11pm CT, 7 days a week</p>
+            <a href="#">Call Us</a>
+        </div>
+        <div class="contact-card">
+            <h3>Email Us</h3>
+            <p>We'd love to hear from you!</p>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMSclsvTfFMDjwDHwfrfzHvrqtZSJpLXDVqPMvWqcCmlKrcKzcjRTnFvFVCZMhnMMqJhWJD">Email Us</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Pangolin. All rights reserved.</p>
+</footer>
+
+<!-- Chatbot -->
+<div id="chatbot">
+    <button id="chatToggle" onclick="toggleChat()">💬 Rollie</button>
+    <div id="chatbox" style="display: none;">
+        <div id="messages"></div>
+        <input type="text" id="userInput" placeholder="Ask Rollie..." onkeydown="if(event.key==='Enter') sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="contact.js"></script>
+
+</body>
+</html>

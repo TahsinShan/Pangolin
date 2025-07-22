@@ -1,0 +1,385 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.logo-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo-link:hover {
+  color: #0070f3;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto; /* push nav links to right */
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0070f3;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  top: 35px;
+  left: 0;
+  min-width: 150px;
+  z-index: 500;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  font-weight: normal;
+  color: #222;
+}
+
+.dropdown-menu li a:hover {
+  background: #f5f5f5;
+}
+
+/* Contact Us Link (styled like button) */
+.contact-link {
+  background: #000;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-link:hover {
+  background: #444;
+}
+
+@media(max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #222;
+  border-radius: 2px;
+}
+
+/* Hero Section */
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url('assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  position: relative;
+}
+
+.hero-content {
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  background: none;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: black;
+}
+
+.cta-button {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cta-button:hover {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* Slider */
+.hero-slider {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Mobile Slider Optimization */
+@media(max-width: 768px) {
+  .hero-slider {
+    height: 300px;
+  }
+
+  .slide {
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+/* Core Services */
+.core-services {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.core-services h2 {
+  font-size: 2rem;
+  margin: 40px 0 20px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.service-card {
+  display: inline-block;
+  text-decoration: none;        /* Removes underline */
+  background: #f8f8f8;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 140px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  background: #000;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Chatbot */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#chatToggle {
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#chatbox {
+  display: none;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  padding: 15px;
+  width: 320px;
+  margin-top: 10px;
+}
+
+#messages {
+  height: 220px;
+  overflow-y: auto;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.user-msg, .bot-msg {
+  padding: 10px 12px;
+  border-radius: 20px;
+  max-width: 80%;
+  display: inline-block;
+  clear: both;
+}
+
+.user-msg {
+  background: #0070f3;
+  color: white;
+  float: right;
+}
+
+.bot-msg {
+  background: #e0e0e0;
+  color: #000;
+  float: left;
+}
+
+#userInput {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#chatbox button {
+  margin-top: 8px;
+  width: 100%;
+  background: #0070f3;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Mobile Navbar */
+@media(max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

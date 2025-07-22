@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pangolin | About Us</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" class="logo-link">Pangolin</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html#sendmoney">Send Money</a></li>
+            <li><a href="services.html#cashout">Cash Out</a></li>
+            <li><a href="services.html#recharge">Mobile Recharge</a></li>
+            <li><a href="services.html#emi">EMI Payment</a></li>
+            <li><a href="services.html#addmoney">Add Money</a></li>
+            <li><a href="services.html#billpay">Bill Pay</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contact.html" class="contact-link">Contact Us</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+
+
+<section class="about-section">
+  <h2>Who We Are</h2>
+  <p>Pangolin is your trusted partner for secure and simple financial solutions. Inspired by leaders like bKash and Nagad, we help you send money, pay bills, recharge mobiles, and more – all in just a few taps.</p>
+  <p>With a focus on customer-first service, transparency, and financial empowerment, Pangolin aims to redefine digital payments in Bangladesh.</p>
+  <p><em>Join us as we build a smarter, cashless future!</em></p>
+</section>
+
+<footer>
+  <p>© 2025 Pangolin. All rights reserved.</p>
+</footer>
+
+<!-- Chatbot -->
+<div id="chatbot">
+  <button id="chatToggle" onclick="toggleChat()">💬 Rollie</button>
+  <div id="chatbox">
+    <div id="messages"></div>
+    <input type="text" id="userInput" placeholder="Ask Rollie..." onkeydown="if(event.key==='Enter') sendMessage()">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="about.js"></script>
+
+</body>
+</html>

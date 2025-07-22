@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangolin | Our Services</title>
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html" class="logo-link">Pangolin</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="services.html" class="active">Services ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html#sendmoney">Send Money</a></li>
+            <li><a href="services.html#cashout">Cash Out</a></li>
+            <li><a href="services.html#recharge">Mobile Recharge</a></li>
+            <li><a href="services.html#emi">EMI Payment</a></li>
+            <li><a href="services.html#addmoney">Add Money</a></li>
+            <li><a href="services.html#billpay">Bill Pay</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Offers</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="contact-link">Contact Us</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+
+<section class="services-intro">
+  <h1>Explore Our Core Services</h1>
+  <p>Your everyday financial needs, made simple with Pangolin.</p>
+</section>
+
+<section id="sendmoney" class="service-section">
+  <div class="service-content">
+    <img src="assets/sendmoney.jpg" alt="Send Money">
+    <div>
+      <h2>Send Money</h2>
+      <p>Transfer money securely to any mobile number instantly, from anywhere in Bangladesh.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cashout" class="service-section alt">
+  <div class="service-content">
+    <img src="assets/cashout.jpg" alt="Cash Out">
+    <div>
+      <h2>Cash Out</h2>
+      <p>Withdraw cash from nearby agents or ATMs securely whenever you need it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="recharge" class="service-section">
+  <div class="service-content">
+    <img src="assets/recharge.jpg" alt="Mobile Recharge">
+    <div>
+      <h2>Mobile Recharge</h2>
+      <p>Top up any mobile operator easily, anytime, and enjoy the best recharge offers.</p>
+    </div>
+  </div>
+</section>
+
+<section id="emi" class="service-section alt">
+  <div class="service-content">
+    <img src="assets/emi.png" alt="EMI Payment">
+    <div>
+      <h2>EMI Payment</h2>
+      <p>Manage your installments conveniently through our EMI payment service.</p>
+    </div>
+  </div>
+</section>
+
+<section id="addmoney" class="service-section">
+  <div class="service-content">
+    <img src="assets/addmoney.png" alt="Add Money">
+    <div>
+      <h2>Add Money</h2>
+      <p>Add funds to your Pangolin account from your bank or card quickly and securely.</p>
+    </div>
+  </div>
+</section>
+
+<section id="billpay" class="service-section alt">
+  <div class="service-content">
+    <img src="assets/paybill.png" alt="Bill Pay">
+    <div>
+      <h2>Bill Pay</h2>
+      <p>Pay all your utility bills from one platform — simple, fast, and secure.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+    <p>© 2025 Pangolin. All rights reserved.</p>
+</footer>
+
+<!-- Chatbot -->
+<div id="chatbot">
+    <button id="chatToggle" onclick="toggleChat()">💬Rollie</button>
+    <div id="chatbox">
+        <div id="messages"></div>
+        <input type="text" id="userInput" placeholder="Ask Rollie..." onkeydown="if(event.key==='Enter') sendMessage()">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="services.js"></script>
+
+</body>
+</html>

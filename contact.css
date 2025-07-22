@@ -1,0 +1,286 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo-link:hover {
+  color: #0070f3;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0070f3;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  top: 35px;
+  left: 0;
+  min-width: 150px;
+  z-index: 500;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  font-weight: normal;
+  color: #222;
+}
+
+.dropdown-menu li a:hover {
+  background: #f5f5f5;
+}
+
+/* Contact Button (Desktop Only) */
+.contact-link {
+  background: #000;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.contact-link:hover {
+  background: #444;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #222;
+  border-radius: 2px;
+}
+
+/* Mobile Styles */
+@media(max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .contact-link {
+    display: block;
+  }
+}
+
+/* Contact Page Section */
+.contact-section {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+}
+
+.contact-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.contact-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0070f3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* Chatbot */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#chatToggle {
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#chatbox {
+  display: none;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  padding: 15px;
+  width: 320px;
+  margin-top: 10px;
+}
+
+#messages {
+  height: 220px;
+  overflow-y: auto;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.user-msg,
+.bot-msg {
+  padding: 10px 12px;
+  border-radius: 20px;
+  max-width: 80%;
+  display: inline-block;
+  clear: both;
+}
+
+.user-msg {
+  background: #0070f3;
+  color: white;
+  float: right;
+}
+
+.bot-msg {
+  background: #e0e0e0;
+  color: #000;
+  float: left;
+}
+
+#userInput {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#chatbox button {
+  margin-top: 8px;
+  width: 100%;
+  background: #0070f3;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
