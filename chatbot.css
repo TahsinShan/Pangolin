@@ -29,7 +29,7 @@
 
 /* Header */
 .chatbot-header {
-  background: #003366;
+  background: #ff7904;
   color: white;
   padding: 10px;
   font-weight: bold;
@@ -47,7 +47,7 @@
 }
 
 .message.bot {
-  background: #e2f0ff;
+  background: #fff5e2;
   padding: 8px 10px;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -69,7 +69,7 @@
 
 .chatbot-input-area button {
   padding: 10px 15px;
-  background: #003366;
+  background: #ff850b;
   color: white;
   border: none;
   cursor: pointer;
