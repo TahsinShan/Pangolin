@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px; /* adjust if your navbar is fixed */
+  scroll-padding-top: 120px; 
 }
 
 .solution-hero {

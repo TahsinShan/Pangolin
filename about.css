@@ -1,5 +1,6 @@
 html{
   scroll-behavior: smooth;
+  scroll-padding-top: 190px;
 }
 /* ============ ABOUT PAGE STYLES ============ */
 .about-hero {
