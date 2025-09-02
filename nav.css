@@ -58,7 +58,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #f34100;
+  color: #ff7e39;
 }
 
 /* Dropdown */
@@ -106,6 +106,82 @@ body {
   text-decoration: none;
   font-weight: 500;
 }
+
+.solutions-mega {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+  padding: 30px 40px;
+  min-width: 700px;
+  display: flex;
+  gap: 40px;
+  border-radius: 6px;
+}
+
+.dropdown:hover .solutions-mega {
+  display: flex;
+}
+
+.solutions-mega .column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.solutions-mega h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.mega-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #222;
+  transition: background 0.2s ease;
+}
+
+.mega-link:hover {
+  background-color: #f0f0f0;
+}
+
+.mega-link .icon {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.mega-link .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-link .title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.mega-link .desc {
+  font-size: 12px;
+  color: #a2a2a2;
+}
+
+
+
+
+
+
 
 /* Search */
 .search-container input {

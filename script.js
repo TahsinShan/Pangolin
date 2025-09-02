@@ -32,3 +32,19 @@ setInterval(() => {
 
 // Initialize
 showSlide(0);
+
+
+// Force dropdown links to scroll correctly
+document.querySelectorAll('.mega-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    // Close menu if needed (optional)
+    document.querySelector('.dropdown-mega').style.display = 'none';
+
+    // Scroll smoothly
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault(); // Prevent default anchor behavior
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});

@@ -20,7 +20,7 @@
 </head>
 <body>
   <script src="nav.js"></script>
-  <!-- NAVBAR -->
+<!-- NAVBAR -->
   <header>
     <nav class="navbar">
       <!-- Logo -->
@@ -41,7 +41,69 @@
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="solution.html">Solutions</a></li>
+<li class="dropdown">
+  <a href="solution.html">Solutions</a>
+  <div class="dropdown-mega solutions-mega">
+    <div class="column">
+      <h4>Platform Features</h4>
+
+      <a href="solution.html#feature-1" class="mega-link">
+        <span class="icon">💸</span>
+        <div class="text">
+          <div class="title">On-Time Wage Access</div>
+          <div class="desc">Digitally disburse wages directly.</div>
+        </div>
+      </a>
+
+      <a href="solution.html#feature-2" class="mega-link">
+        <span class="icon">🚑</span>
+        <div class="text">
+          <div class="title">Emergency Microloans</div>
+          <div class="desc">Low-interest loans via the app.</div>
+        </div>
+      </a>
+
+      <a href="solution.html#feature-3" class="mega-link">
+        <span class="icon">📅</span>
+        <div class="text">
+          <div class="title">Digital Leave Requests</div>
+          <div class="desc">Leave requests without fear or bias.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="column">
+      <h4>Productivity & Trust</h4>
+
+      <a href="solution.html#feature-4" class="mega-link">
+        <span class="icon">⏱️</span>
+        <div class="text">
+          <div class="title">Attendance Tracking</div>
+          <div class="desc">QR or biometric clock-ins, real-time logs.</div>
+        </div>
+      </a>
+
+      <a href="solution.html#feature-5" class="mega-link">
+        <span class="icon">🏪</span>
+        <div class="text">
+          <div class="title">Cash-Out via Local Vendors</div>
+          <div class="desc">Withdraw wages without high fees.</div>
+        </div>
+      </a>
+
+      <a href="solution.html#feature-6" class="mega-link">
+        <span class="icon">🤝</span>
+        <div class="text">
+          <div class="title">Job Matching Tool</div>
+          <div class="desc">Match to new jobs via verified history.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
           <li><a href="#">Our Partners</a></li>
           <li><a href="about.html">About Us</a></li>
 
@@ -118,66 +180,72 @@
   <div class="solution-detailed-container">
     <h2 class="solution-detailed-title">Pangolin – Detailed Solutions</h2>
 
-    <!-- Features Start -->
-    <div class="solution-feature">
-      <div class="solution-feature-number">1</div>
-      <div class="solution-feature-content">
-        <h3>On-Time Wage Access</h3>
-        <p><strong>What it is:</strong> A payroll system that ensures salaries are disbursed on time, every time, without deductions or manipulation. Salaries flow digitally from the company account to the worker’s Pangolin wallet, reducing reliance on cash-handling middlemen.</p>
-        <p><strong>Why it matters for workers:</strong> Delayed or cut wages cause stress, debt cycles, and force workers to borrow at predatory rates. With Pangolin, workers can plan their family expenses, pay bills, and avoid loan sharks.</p>
-        <p><strong>Why it matters for companies:</strong> On-time wages build trust, reduce disputes, and improve retention and productivity. Factories also gain regulatory compliance and digital payroll records for audits and reporting.</p>
-      </div>
-    </div>
+   <!-- Feature 1 -->
+<div class="solution-feature" id="feature-1">
+  <div class="solution-feature-number">1</div>
+  <div class="solution-feature-content">
+    <h3>On-Time Wage Access</h3>
+    <p><strong>What it is:</strong> A payroll system that ensures salaries are disbursed on time, every time, without deductions or manipulation. Salaries flow digitally from the company account to the worker’s Pangolin wallet, reducing reliance on cash-handling middlemen.</p>
+    <p><strong>Why it matters for workers:</strong> Delayed or cut wages cause stress, debt cycles, and force workers to borrow at predatory rates. With Pangolin, workers can plan their family expenses, pay bills, and avoid loan sharks.</p>
+    <p><strong>Why it matters for companies:</strong> On-time wages build trust, reduce disputes, and improve retention and productivity. Factories also gain regulatory compliance and digital payroll records for audits and reporting.</p>
+  </div>
+</div>
 
-    <div class="solution-feature">
-      <div class="solution-feature-number">2</div>
-      <div class="solution-feature-content">
-        <h3>Emergency Microloans</h3>
-        <p><strong>What it is:</strong> Instant, small, low-interest loans available directly through the Pangolin app when salaries are delayed or emergencies strike (medical, school fees, family needs).</p>
-        <p><strong>Why it matters for workers:</strong> Workers usually borrow from local moneylenders at 120–200% interest annually. Pangolin loans are ethical, transparent, and repayable directly from upcoming wages. This reduces exploitation and protects dignity.</p>
-        <p><strong>Why it matters for companies:</strong> Financially stable workers are less absent, more focused, and loyal. This feature prevents strikes and walkouts when salaries are delayed, giving employers operational continuity.</p>
-      </div>
-    </div>
+<!-- Feature 2 -->
+<div class="solution-feature" id="feature-2">
+  <div class="solution-feature-number">2</div>
+  <div class="solution-feature-content">
+    <h3>Emergency Microloans</h3>
+    <p><strong>What it is:</strong> Instant, small, low-interest loans available directly through the Pangolin app when salaries are delayed or emergencies strike (medical, school fees, family needs).</p>
+    <p><strong>Why it matters for workers:</strong> Workers usually borrow from local moneylenders at 120–200% interest annually. Pangolin loans are ethical, transparent, and repayable directly from upcoming wages. This reduces exploitation and protects dignity.</p>
+    <p><strong>Why it matters for companies:</strong> Financially stable workers are less absent, more focused, and loyal. This feature prevents strikes and walkouts when salaries are delayed, giving employers operational continuity.</p>
+  </div>
+</div>
 
-    <div class="solution-feature">
-      <div class="solution-feature-number">3</div>
-      <div class="solution-feature-content">
-        <h3>Digital Leave Requests</h3>
-        <p><strong>What it is:</strong> A mobile feature where workers can apply for leave using ready-made templates (sick leave, family emergency, maternity, etc.) or directly call their supervisor from within the app.</p>
-        <p><strong>Why it matters for workers:</strong> Many workers fear asking for leave verbally due to power dynamics with supervisors. Digital requests create a paper trail, ensuring fairness and reducing favoritism.</p>
-        <p><strong>Why it matters for companies:</strong> HR gains structured leave records, reducing confusion and last-minute absenteeism. Transparent leave policies improve morale and reduce disputes.</p>
-      </div>
-    </div>
+<!-- Feature 3 -->
+<div class="solution-feature" id="feature-3">
+  <div class="solution-feature-number">3</div>
+  <div class="solution-feature-content">
+    <h3>Digital Leave Requests</h3>
+    <p><strong>What it is:</strong> A mobile feature where workers can apply for leave using ready-made templates (sick leave, family emergency, maternity, etc.) or directly call their supervisor from within the app.</p>
+    <p><strong>Why it matters for workers:</strong> Many workers fear asking for leave verbally due to power dynamics with supervisors. Digital requests create a paper trail, ensuring fairness and reducing favoritism.</p>
+    <p><strong>Why it matters for companies:</strong> HR gains structured leave records, reducing confusion and last-minute absenteeism. Transparent leave policies improve morale and reduce disputes.</p>
+  </div>
+</div>
 
-    <div class="solution-feature">
-      <div class="solution-feature-number">4</div>
-      <div class="solution-feature-content">
-        <h3>Attendance & Productivity Tracking</h3>
-        <p><strong>What it is:</strong> Workers clock in/out via QR code scans or biometric devices. Break times and overtime are logged automatically, feeding into payroll and performance dashboards.</p>
-        <p><strong>Why it matters for workers:</strong> Workers can see their actual working hours, overtime, and breaks in real time — ensuring they are paid correctly. No more manipulation or undercounting.</p>
-        <p><strong>Why it matters for companies:</strong> Managers gain accurate attendance and productivity data. This improves workforce planning, reduces fraud (ghost workers), and ensures fair overtime payouts.</p>
-      </div>
-    </div>
+<!-- Feature 4 -->
+<div class="solution-feature" id="feature-4">
+  <div class="solution-feature-number">4</div>
+  <div class="solution-feature-content">
+    <h3>Attendance & Productivity Tracking</h3>
+    <p><strong>What it is:</strong> Workers clock in/out via QR code scans or biometric devices. Break times and overtime are logged automatically, feeding into payroll and performance dashboards.</p>
+    <p><strong>Why it matters for workers:</strong> Workers can see their actual working hours, overtime, and breaks in real time — ensuring they are paid correctly. No more manipulation or undercounting.</p>
+    <p><strong>Why it matters for companies:</strong> Managers gain accurate attendance and productivity data. This improves workforce planning, reduces fraud (ghost workers), and ensures fair overtime payouts.</p>
+  </div>
+</div>
 
-    <div class="solution-feature">
-      <div class="solution-feature-number">5</div>
-      <div class="solution-feature-content">
-        <h3>Cash-Out via Local Vendors</h3>
-        <p><strong>What it is:</strong> A network of trusted community shops and vendors that act as withdrawal points. Workers can cash out wages without ATMs, bank accounts, or high mobile wallet fees.</p>
-        <p><strong>Why it matters for workers:</strong> Banking exclusion is common in rural Bangladesh. With Pangolin, workers can access their full salary easily, avoiding the 8–10% cash-out fees from mobile money operators.</p>
-        <p><strong>Why it matters for companies:</strong> Factories avoid bottlenecks of cash distribution days and reduce risks of carrying large sums of cash. It also boosts goodwill as workers see real savings in their take-home pay.</p>
-      </div>
-    </div>
+<!-- Feature 5 -->
+<div class="solution-feature" id="feature-5">
+  <div class="solution-feature-number">5</div>
+  <div class="solution-feature-content">
+    <h3>Cash-Out via Local Vendors</h3>
+    <p><strong>What it is:</strong> A network of trusted community shops and vendors that act as withdrawal points. Workers can cash out wages without ATMs, bank accounts, or high mobile wallet fees.</p>
+    <p><strong>Why it matters for workers:</strong> Banking exclusion is common in rural Bangladesh. With Pangolin, workers can access their full salary easily, avoiding the 8–10% cash-out fees from mobile money operators.</p>
+    <p><strong>Why it matters for companies:</strong> Factories avoid bottlenecks of cash distribution days and reduce risks of carrying large sums of cash. It also boosts goodwill as workers see real savings in their take-home pay.</p>
+  </div>
+</div>
 
-    <div class="solution-feature">
-      <div class="solution-feature-number">6</div>
-      <div class="solution-feature-content">
-        <h3>Job Matching Tool</h3>
-        <p><strong>What it is:</strong> A platform feature connecting workers to job opportunities in partner factories/companies, based on skill, location, and experience.</p>
-        <p><strong>Why it matters for workers:</strong> Many workers find jobs through informal, exploitative middlemen. Pangolin provides a direct, transparent channel, empowering workers to negotiate better opportunities.</p>
-        <p><strong>Why it matters for companies:</strong> Employers gain access to a reliable talent pool with verified work history, reducing recruitment costs and turnover.</p>
-      </div>
-    </div>
+<!-- Feature 6 -->
+<div class="solution-feature" id="feature-6">
+  <div class="solution-feature-number">6</div>
+  <div class="solution-feature-content">
+    <h3>Job Matching Tool</h3>
+    <p><strong>What it is:</strong> A platform feature connecting workers to job opportunities in partner factories/companies, based on skill, location, and experience.</p>
+    <p><strong>Why it matters for workers:</strong> Many workers find jobs through informal, exploitative middlemen. Pangolin provides a direct, transparent channel, empowering workers to negotiate better opportunities.</p>
+    <p><strong>Why it matters for companies:</strong> Employers gain access to a reliable talent pool with verified work history, reducing recruitment costs and turnover.</p>
+  </div>
+</div>
+
     <!-- Features End -->
 
     <!-- Strategic Initiatives -->
