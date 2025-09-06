@@ -135,3 +135,15 @@ html {
 }
 
 
+.feature-title {
+  text-decoration: none;
+  color: #1a1a1a; /* dark text color */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.feature-title:hover {
+  color: #ff801f; /* change to your preferred hover color */
+  border-bottom: 2px solid #ff7c2b; /* underline on hover */
+}
