@@ -90,3 +90,47 @@
     gap: 30px;
   }
 }
+
+
+
+.why-choose {
+  background: #fceee7;
+  padding: 80px 20px;
+}
+
+.why-choose .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.why-choose h2 {
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  margin-bottom: 40px;
+  color: #0a143a;
+}
+
+.talk-btn {
+  background: #0a143a;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Desktop positioning */
+@media (min-width: 768px) {
+  .talk-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(50%);
+    margin-top: 0;
+  }
+}
