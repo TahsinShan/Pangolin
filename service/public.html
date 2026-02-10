@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pangolin</title>
+  <link rel="icon" type="image/png" href="/assets/hlogo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/chatbot.css" />
+  <link rel="stylesheet" href="/nav.css" />
+  <link rel="stylesheet" href="/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+  <script src="/nav.js"></script>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/index.html" class="logo-link">
+          <img src="/assets/logo.png" alt="Logo" height="50" />
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Nav + Search wrapper -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+<li class="dropdown">
+  <a href="/solution.html">Solutions</a>
+  <div class="dropdown-mega solutions-mega">
+    <div class="column">
+      <h4>Platform Features</h4>
+
+      <a href="/wage.html" class="mega-link">
+        <span class="icon">💸</span>
+        <div class="text">
+          <div class="title">On-Time Wage Access</div>
+          <div class="desc">Digitally disburse wages directly.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-2" class="mega-link">
+        <span class="icon">🚑</span>
+        <div class="text">
+          <div class="title">Emergency Microloans</div>
+          <div class="desc">Low-interest loans via the app.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-3" class="mega-link">
+        <span class="icon">📅</span>
+        <div class="text">
+          <div class="title">Digital Leave Requests</div>
+          <div class="desc">Leave requests without fear or bias.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="column">
+      <h4>Productivity & Trust</h4>
+
+      <a href="/solution.html#feature-4" class="mega-link">
+        <span class="icon">⏱️</span>
+        <div class="text">
+          <div class="title">Attendance Tracking</div>
+          <div class="desc">QR or biometric clock-ins, real-time logs.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-5" class="mega-link">
+        <span class="icon">🏪</span>
+        <div class="text">
+          <div class="title">Cash-Out via Local Vendors</div>
+          <div class="desc">Withdraw wages without high fees.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-6" class="mega-link">
+        <span class="icon">🤝</span>
+        <div class="text">
+          <div class="title">Job Matching Tool</div>
+          <div class="desc">Match to new jobs via verified history.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+          <li><a href="#">Our Partners</a></li>
+          <li><a href="/about.html">About Us</a></li>
+
+          <li class="dropdown">
+  <a href="/service.html">Services</a>
+  <div class="dropdown-mega">
+    <div class="column">
+      <h4>Industries We Serve</h4>
+      <p>On-demand pay and workforce tools across key sectors.</p>
+      <hr class="dropdown-separator" />
+
+      <a href="/service/garments.html">Garments &amp; Textiles</a>
+      <a href="/service/tea.html">Tea Plantations</a>
+      <a href="/service/civil.html">Construction &amp; Civil Work</a>
+      <a href="/service/payroll.html">Manufacturing &amp; Light Industry</a>
+      <a href="/service/shop.html">Retail &amp; Small Enterprises</a>
+      <a href="/service/agri.html">Agriculture &amp; Rural Workforce</a>
+      <a href="/service/public.html">Public Sector &amp; Development Projects</a>
+    </div>
+
+    <div class="column">
+      <!-- Future content (case studies, CTA, etc.) -->
+    </div>
+  </div>
+</li>
+
+
+          <li class="dropdown">
+            <a href="#">Help</a>
+            <div class="dropdown-mega">
+              <div class="column">
+                <a href="#">PIN Reset</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Nagad Sheba</a>
+                <a href="#">Distributor locator</a>
+              </div>
+              <div class="column">
+                <a href="#">Limit and Charges</a>
+                <a href="#">Web Self Care</a>
+                <a href="#">Merchant locator</a>
+                <a href="#">Discontinued Uddokta</a>
+              </div>
+              <div class="column">
+                <a href="#">Nagad Transaction Calculator</a>
+                <a href="#">Virtual Number</a>
+                <a href="#">Uddokta locator</a>
+                <a href="#">Discontinued Distributor</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <div class="search-container">
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <style>
+    body {
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 100px;
+  font-family: 'Merriweather', serif;
+  color: #111;
+  max-width: 90%;
+  line-height: 1.6;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.article-section {
+  border: 1px solid #ddd;
+  padding: 20px 30px 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 50px;
+}
+
+.article-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+  color: #222;
+  text-align: center;
+}
+
+.article-section p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.article-section p.intro {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1.6rem;
+}
+
+.two-columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.two-columns div {
+  flex: 1 1 300px;
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+  min-width: 280px;
+}
+
+.article-section img {
+  max-width: 100%;
+  height: auto;
+  margin: 30px auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.article-section img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+    max-width: 100%;
+  }
+  
+  .article-section {
+    padding: 20px 25px 30px 25px;
+    margin-bottom: 40px;
+  }
+  
+  .article-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .two-columns {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .two-columns div {
+    min-width: 100%;
+  }
+  
+  .article-section p,
+  .article-section p.intro {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+  </style>
+
+
+
+
+
+
+<section class="article-section">
+  <h2>The Ledger of Trust: Rebuilding Accountability in Bangladesh's Public & Development Sphere</h2>
+
+  <p class="intro">
+    Imagine a bridge being built in a flood-prone char area. An NGO has secured the foreign aid, the engineers have drawn the plans, and the local community is ready to supply the labour. This project promises connection, safety, progress. Yet, beneath this promise lies a silent, corrosive anxiety: Will the workers actually get paid? Will the funds meant for their wages reach them, or will they seep away into a maze of intermediaries, forged signatures, and ghost workers?
+  </p>
+
+  <p>
+    <strong>The "Leaky Bucket" Syndrome: Where Good Funds Go Bad</strong><br>
+    In this ecosystem, the worker—let's call him Sohail, hired for a 45-day cash-for-work scheme—is the last and least-informed node in a long chain. His engagement often follows a familiar, troubling pattern.
+  </p>
+
+  <div class="two-columns">
+    <div>
+      <p><strong>For the Worker (Sohail):</strong> He does the backbreaking work, puts his thumbprint on a paper register, but payment is delayed for weeks. He has no way to verify the official rate per day or if his name is on the real list. He suspects some names are "ghosts," but speaking up risks his job. His participation becomes an exercise in quiet disillusionment.</p>
+    </div>
+    <div>
+      <p><strong>For the NGO/Project Implementer:</strong> Drowning in manual paperwork, staff cannot access real-time truth. Attendance sheets are manually compiled, finance teams rely on often-illegible documents, and auditors find discrepancies they cannot trace. Organizational reputation and donor trust are perpetually at risk.</p>
+      <p><strong>For the Donor & Public:</strong> They see the shelter built, but a cloud of doubt hangs over the project's efficiency. The "leaky bucket" phenomenon undermines the social contract, fueling cynicism about fair management of public resources.</p>
+    </div>
+  </div>
+
+  <p>
+    <strong>The Plantation as a Parallel State: A Blueprint for Exclusion</strong><br>
+    The tea estates operate as self-contained fiefdoms. Workers are paid according to the estate's private ledgers, with weekly allowances, bonuses, and deductions entirely controlled by management. No independent, worker-accessible verification exists. This absolute power imbalance proves that without transparent, externally verifiable systems, formal employment can be a tool of exploitation. The lesson is clear: for development projects, building transparent wage systems is a moral imperative.
+  </p>
+
+  <p>
+    <strong>The New Social Contract: Transparency as the Service</strong><br>
+    Digital wage and accountability systems transform NGOs and local government units. They move from "We deliver aid" to "We deliver verifiable integrity." Implementing agencies gain real-time data protection; beneficiaries gain dignity and active auditing power; donors and society gain trust that funds are reaching the intended workers.
+  </p>
+
+  <p>
+    <strong>How Pangolin Operates: The "Glass-Box" Implementation Model</strong>
+  </p>
+
+  <div style="margin-left: 20px;">
+    <p><strong>Phase 1: Project Digital Twin - Setting the Ironclad Rules.</strong> The NGO sets up the project in the Nidran dashboard with parameters: wage rate (Tk 500/day), project duration, worker quota, and budget ceiling. Payments violating these rules are blocked.</p>
+    <p><strong>Phase 2: Worker Registration - Biometric Baselining.</strong> Field organisers enrol workers using a tablet or smartphone, capturing name, photo, and fingerprint or iris scan. Each worker receives a unique digital ID linked to a mobile number for financial access.</p>
+    <p><strong>Phase 3: Attendance - The Immutable Log.</strong> Daily, Sohail authenticates presence with fingerprint scanning. GPS-tagged and time-stamped, logs flow to the cloud, bypassing any officer's personal control. Ghost workers cannot be added.</p>
+    <p><strong>Phase 4: Disbursement - The Automated, Transparent Pipeline.</strong> Payroll is auto-generated: "Sohail, ID#X, 18 days, Tk 9,000." NGO finance officer approves. Funds are disbursed directly via bKash, Nagad, or bank APIs. No middleman accounts are involved.</p>
+    <p><strong>Phase 5: The Social Accountability Layer - The Public Dashboard.</strong> Each project can display aggregate data publicly: total budget, workers enrolled, wages disbursed, average days worked. Anyone can scan a QR code and verify the system's operation in real time.</p>
+    <p><strong>Phase 6: Grievance & Feedback - Closing the Loop.</strong> Sohail can file digitally timestamped grievances through his worker app. Randomized verification calls and clean digital records ensure accountability across the project lifecycle.</p>
+  </div>
+
+  <img src="/assets/ledger-of-trust.png" alt="Worker receiving digital wage confirmation in a public works project" />
+
+  <p>
+    <strong>Pouring a Foundation of Trust</strong><br>
+    The NGO no longer has to claim integrity; it demonstrates it through live data. Donors see an auditable fund pipeline. Sohail receives SMS confirmations for attendance and payments, owning a digital receipt of his work. Digital wage systems here do more than pay—they re-wire the circuitry of trust in public life. They stand as the antithesis to closed ledgers of the tea gardens, proving that in Bangladesh's future, development projects will build both infrastructure and an unshakeable, transparent foundation of accountability for every Taka and every hour of labour invested.
+  </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Chatbot: Rollie -->
+<div class="chatbot-container" id="chatbot">
+  <div class="chatbot-header">
+    <span>Rollie 🤖</span>
+    <button id="chatbot-close">&times;</button>
+  </div>
+  <div class="chatbot-messages" id="chatbot-messages">
+    <div class="message bot">Hi! I’m Rollie, your assistant here.</div>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Type a message..." />
+    <button id="chatbot-send">➤</button>
+  </div>
+</div>
+
+<!-- Bot Icon -->
+<div id="chatbot-icon">
+  <img src="/assets/bot.png" alt="Chatbot Icon" height="100px"/>
+</div>
+
+<script src="/chatbot.js"></script>
+
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="/assets/logo.png" alt="Pangolin Logo" class="footer-logo" />
+      <p><strong>Pangolin HQ</strong><br>
+      Savar, Dhaka<br>
+      Bangladesh</p>
+      <a href="/contact.html" class="footer-contact">Contact us ></a>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <a href="/about.html">About Us</a>
+        <a href="#">Impact</a>
+        <a href="#">Careers</a>
+        <a href="#">Awards</a>
+        <a href="#">Security</a>
+      </div>
+      <div>
+        <h4>For Employers</h4>
+        <a href="#">Overview</a>
+        <a href="#">Why Pangolin</a>
+        <a href="#">Clients</a>
+        <a href="#">Integrations</a>
+      </div>
+      <div>
+        <h4>Platform & Features</h4>
+        <a href="#">Pangolin Platform</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Blog</a>
+        <a href="#">On-Demand Pay</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

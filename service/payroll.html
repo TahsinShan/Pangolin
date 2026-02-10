@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pangolin</title>
+  <link rel="icon" type="image/png" href="/assets/hlogo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/chatbot.css" />
+  <link rel="stylesheet" href="/nav.css" />
+  <link rel="stylesheet" href="/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+  <script src="/nav.js"></script>
+  <!-- NAVBAR -->
+   <header>
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/index.html" class="logo-link">
+          <img src="/assets/logo.png" alt="Logo" height="50" />
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Nav + Search wrapper -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+<li class="dropdown">
+  <a href="/solution.html">Solutions</a>
+  <div class="dropdown-mega solutions-mega">
+    <div class="column">
+      <h4>Platform Features</h4>
+
+      <a href="/wage.html" class="mega-link">
+        <span class="icon">💸</span>
+        <div class="text">
+          <div class="title">On-Time Wage Access</div>
+          <div class="desc">Digitally disburse wages directly.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-2" class="mega-link">
+        <span class="icon">🚑</span>
+        <div class="text">
+          <div class="title">Emergency Microloans</div>
+          <div class="desc">Low-interest loans via the app.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-3" class="mega-link">
+        <span class="icon">📅</span>
+        <div class="text">
+          <div class="title">Digital Leave Requests</div>
+          <div class="desc">Leave requests without fear or bias.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="column">
+      <h4>Productivity & Trust</h4>
+
+      <a href="/solution.html#feature-4" class="mega-link">
+        <span class="icon">⏱️</span>
+        <div class="text">
+          <div class="title">Attendance Tracking</div>
+          <div class="desc">QR or biometric clock-ins, real-time logs.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-5" class="mega-link">
+        <span class="icon">🏪</span>
+        <div class="text">
+          <div class="title">Cash-Out via Local Vendors</div>
+          <div class="desc">Withdraw wages without high fees.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-6" class="mega-link">
+        <span class="icon">🤝</span>
+        <div class="text">
+          <div class="title">Job Matching Tool</div>
+          <div class="desc">Match to new jobs via verified history.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+          <li><a href="#">Our Partners</a></li>
+          <li><a href="/about.html">About Us</a></li>
+
+          <li class="dropdown">
+  <a href="/service.html">Services</a>
+  <div class="dropdown-mega">
+    <div class="column">
+      <h4>Industries We Serve</h4>
+      <p>On-demand pay and workforce tools across key sectors.</p>
+      <hr class="dropdown-separator" />
+
+      <a href="/service/garments.html">Garments &amp; Textiles</a>
+      <a href="/service/tea.html">Tea Plantations</a>
+      <a href="/service/civil.html">Construction &amp; Civil Work</a>
+      <a href="/service/payroll.html">Manufacturing &amp; Light Industry</a>
+      <a href="/service/shop.html">Retail &amp; Small Enterprises</a>
+      <a href="/service/agri.html">Agriculture &amp; Rural Workforce</a>
+      <a href="/service/public.html">Public Sector &amp; Development Projects</a>
+    </div>
+
+    <div class="column">
+      <!-- Future content (case studies, CTA, etc.) -->
+    </div>
+  </div>
+</li>
+
+
+          <li class="dropdown">
+            <a href="#">Help</a>
+            <div class="dropdown-mega">
+              <div class="column">
+                <a href="#">PIN Reset</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Nagad Sheba</a>
+                <a href="#">Distributor locator</a>
+              </div>
+              <div class="column">
+                <a href="#">Limit and Charges</a>
+                <a href="#">Web Self Care</a>
+                <a href="#">Merchant locator</a>
+                <a href="#">Discontinued Uddokta</a>
+              </div>
+              <div class="column">
+                <a href="#">Nagad Transaction Calculator</a>
+                <a href="#">Virtual Number</a>
+                <a href="#">Uddokta locator</a>
+                <a href="#">Discontinued Distributor</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <div class="search-container">
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+  <style>
+    body {
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 100px;
+  font-family: 'Merriweather', serif;
+  color: #111;
+  max-width: 90%;
+  line-height: 1.6;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.article-section {
+  border: 1px solid #ddd;
+  padding: 20px 30px 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 50px;
+}
+
+.article-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+  color: #222;
+  text-align: center;
+}
+
+.article-section p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.article-section p.intro {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1.6rem;
+}
+
+.two-columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.two-columns div {
+  flex: 1 1 300px;
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+  min-width: 280px;
+}
+
+.article-section img {
+  max-width: 100%;
+  height: auto;
+  margin: 30px auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.article-section img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+    max-width: 100%;
+  }
+  
+  .article-section {
+    padding: 20px 25px 30px 25px;
+    margin-bottom: 40px;
+  }
+  
+  .article-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .two-columns {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .two-columns div {
+    min-width: 100%;
+  }
+  
+  .article-section p,
+  .article-section p.intro {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+  </style>
+
+
+
+<section class="article-section">
+  <h2>The Digital Payroll Revolution: Transforming Bangladesh's Manufacturing & Light Industry</h2>
+
+  <p class="intro">
+    In the bustling factories and sprawling tea gardens of Bangladesh, a quiet revolution is unfolding. For decades, the nation's economic ascent has been powered by the toil of millions of workers in its Ready-Made Garment (RMG) sector, light industries, and agricultural estates. Yet, this growth has often been shadowed by systemic challenges in worker payment, rights, and welfare. Today, a new paradigm is emerging—one that leverages digital tools in payroll, workforce analytics, and compliance monitoring not merely as administrative upgrades, but as fundamental instruments for justice, productivity, and sustainable development.
+  </p>
+
+  <p>
+    At its core, this transformation involves replacing antiquated, cash-based, and manual record-keeping systems with integrated digital platforms. Digital payroll ensures workers receive accurate, timely, and transparent wages directly into verified bank or mobile financial service accounts. Worker analytics involves ethically collecting and analysing anonymised data on attendance, productivity trends, and skill levels to optimise operations, identify training needs, and improve workplace safety. Compliance monitoring uses digital logs, blockchain-enabled audit trails, and real-time reporting to ensure adherence to labour laws, safety standards, and international buyer codes of conduct.
+  </p>
+
+  <img src="/assets/wage(1).png" alt="Digital payroll system in factories" />
+
+  <div class="two-columns">
+    <div>
+      <p>
+        Crucially, this is not about increased surveillance or dehumanising the workforce. It is not a tool for punitive micromanagement. Instead, when implemented ethically and transparently, it is a framework for empowerment and evidence-based dignity. It moves worker welfare from the realm of anecdote and assumption into the domain of verifiable data and accountable action.
+      </p>
+      <p>
+        To understand the urgency, one must confront the stark contrast within Bangladesh’s labour landscape. The plight of the tea garden workers—an estimated 1.5 lakh people, primarily descendants of colonial-era migrants—serves as a tragic parable of what happens in the absence of such systems.
+      </p>
+    </div>
+    <div>
+      <p>
+        For generations, tea workers have remained trapped in a cycle of acute deprivation. Their wages have historically been among the lowest in the world, often paid in cash with opaque deductions. They live in basic labour lines (colony housing) owned by estates, with access tied to employment. Benefits like provident funds, gratuities, and accurate overtime calculations are mired in manual, easily manipulated ledgers. The lack of digital footprints for their earnings and contributions makes advocacy difficult and perpetuates their status as an invisible underclass.
+      </p>
+      <p>
+        Conversely, in Bangladesh’s RMG and light industry sectors, which employ over 4 million, progress has been made, but challenges persist. While many large factories have adopted some digital systems under pressure from global brands and initiatives like the Accord, issues remain: delayed wages, illegal deductions, dispute over overtime calculation, and falsified attendance records. The 2013 Rana Plaza tragedy was a catastrophic manifestation of systemic compliance failure.
+      </p>
+    </div>
+  </div>
+
+  <img src="/assets/wage(2).png" alt="Workers using digital payroll app" />
+
+  <p>
+    Bangladesh stands at a critical juncture. It aims to graduate from Least Developed Country (LDC) status and has committed to sustainable development under SDG 8 (Decent Work and Economic Growth). The nation’s future competitiveness hinges on moving beyond low-cost labour to a reputation for quality, ethics, and reliability. Implementing robust digital systems directly addresses this need.
+  </p>
+
+  <div class="two-columns">
+    <div>
+      <p><strong>Economic Justice & Financial Inclusion:</strong> Digital payroll pulls wages into the formal economy. It gives workers—especially women who constitute most of the RMG workforce—control over their earnings, reduces theft or coercion, and provides a transaction history essential for accessing loans or other financial services.</p>
+      <p><strong>Building Trust & Industrial Harmony:</strong> Transparent wage calculation and payment eliminate a primary source of disputes. When a worker can see a digital payslip detailing hours, rates, and deductions, trust between management and labour increases, reducing unrest and turnover.</p>
+    </div>
+    <div>
+      <p><strong>Enhancing Global Competitiveness:</strong> International buyers and investors increasingly demand verifiable ethical credentials. A factory with a digital ecosystem proving fair wages, safe hours, and real-time compliance has a significant market advantage.</p>
+      <p><strong>Data-Driven Productivity:</strong> Analytics can identify bottlenecks in production lines, predict machine maintenance needs, and highlight skills gaps. This leads to smarter investment in training and technology, boosting output and quality.</p>
+    </div>
+  </div>
+
+  <img src="/assets/wage(3).png" alt="Analytics dashboard for workforce monitoring" />
+
+  <p>
+    <strong>Pangolin’s Operational Model:</strong> A company like Pangoin integrates its solutions directly into the operational heartbeat of a factory or estate. Their implementation blueprint involves several phases:
+  </p>
+
+  <div style="margin-left: 20px;">
+    <p><strong>Phase 1: Foundation – The Digital Identity & Infrastructure.</strong> Each worker is registered with a unique digital ID linked to biometrics and a personal financial account, ensuring recognition and traceability.</p>
+    <p><strong>Phase 2: Core Processing – Attendance to Payroll.</strong> Biometric terminals or mobile apps clock workers in/out. Data flows to HRM and payroll systems configured with all pay structures, auto-generating accurate payslips and triggering payments directly to worker accounts.</p>
+    <p><strong>Phase 3: Intelligence & Monitoring – The Analytics Dashboard.</strong> Managers access real-time dashboards showing attendance, productivity, absenteeism, and compliance alerts for proactive intervention.</p>
+    <p><strong>Phase 4: Transparency & Engagement – The Worker Interface.</strong> Workers can view attendance records, download payslips, check benefits, submit grievances, and access announcements or training materials via mobile or USSD.</p>
+    <p><strong>Phase 5: Assurance – The Audit Trail.</strong> Every transaction is timestamped and logged, creating an immutable, blockchain-style audit trail for compliance and third-party audits.</p>
+  </div>
+
+  <img src="/assets/wage(4).png" alt="Worker viewing digital payslip on mobile" />
+
+  <p>
+    The journey for Bangladesh’s manufacturing and light industry is clear. The alternative—relying on opaque, manual systems—perpetuates the vulnerabilities seen in the tea gardens and limits national potential. Embracing a holistic digital ecosystem for payroll, analytics, and compliance is no longer a luxury; it is a necessity for dignity, industrial peace, and global market relevance.
+  </p>
+
+  <p>
+    The goal is to ensure that the value created by Bangladesh’s workers is matched by the value they receive—in wages, rights, and respect. By digitising the backbone of employment, Bangladesh can secure a future where economic growth is measured not only in export dollars, but in the verified wellbeing of every worker.
+  </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Chatbot: Rollie -->
+<div class="chatbot-container" id="chatbot">
+  <div class="chatbot-header">
+    <span>Rollie 🤖</span>
+    <button id="chatbot-close">&times;</button>
+  </div>
+  <div class="chatbot-messages" id="chatbot-messages">
+    <div class="message bot">Hi! I’m Rollie, your assistant here.</div>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Type a message..." />
+    <button id="chatbot-send">➤</button>
+  </div>
+</div>
+
+<!-- Bot Icon -->
+<div id="chatbot-icon">
+  <img src="/assets/bot.png" alt="Chatbot Icon" height="100px"/>
+</div>
+
+<script src="/chatbot.js"></script>
+
+
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="/assets/logo.png" alt="Pangolin Logo" class="footer-logo" />
+      <p><strong>Pangolin HQ</strong><br>
+      Savar, Dhaka<br>
+      Bangladesh</p>
+      <a href="/contact.html" class="footer-contact">Contact us ></a>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <a href="/about.html">About Us</a>
+        <a href="#">Impact</a>
+        <a href="#">Careers</a>
+        <a href="#">Awards</a>
+        <a href="#">Security</a>
+      </div>
+      <div>
+        <h4>For Employers</h4>
+        <a href="#">Overview</a>
+        <a href="#">Why Pangolin</a>
+        <a href="#">Clients</a>
+        <a href="#">Integrations</a>
+      </div>
+      <div>
+        <h4>Platform & Features</h4>
+        <a href="#">Pangolin Platform</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Blog</a>
+        <a href="#">On-Demand Pay</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/script.js"></script>
+</body>
+</html>

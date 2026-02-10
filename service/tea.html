@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pangolin</title>
+  <link rel="icon" type="image/png" href="/assets/hlogo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/chatbot.css" />
+  <link rel="stylesheet" href="/nav.css" />
+  <link rel="stylesheet" href="/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+  <script src="/nav.js"></script>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/index.html" class="logo-link">
+          <img src="/assets/logo.png" alt="Logo" height="50" />
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Nav + Search wrapper -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+<li class="dropdown">
+  <a href="/solution.html">Solutions</a>
+  <div class="dropdown-mega solutions-mega">
+    <div class="column">
+      <h4>Platform Features</h4>
+
+      <a href="/wage.html" class="mega-link">
+        <span class="icon">💸</span>
+        <div class="text">
+          <div class="title">On-Time Wage Access</div>
+          <div class="desc">Digitally disburse wages directly.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-2" class="mega-link">
+        <span class="icon">🚑</span>
+        <div class="text">
+          <div class="title">Emergency Microloans</div>
+          <div class="desc">Low-interest loans via the app.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-3" class="mega-link">
+        <span class="icon">📅</span>
+        <div class="text">
+          <div class="title">Digital Leave Requests</div>
+          <div class="desc">Leave requests without fear or bias.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="column">
+      <h4>Productivity & Trust</h4>
+
+      <a href="/solution.html#feature-4" class="mega-link">
+        <span class="icon">⏱️</span>
+        <div class="text">
+          <div class="title">Attendance Tracking</div>
+          <div class="desc">QR or biometric clock-ins, real-time logs.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-5" class="mega-link">
+        <span class="icon">🏪</span>
+        <div class="text">
+          <div class="title">Cash-Out via Local Vendors</div>
+          <div class="desc">Withdraw wages without high fees.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-6" class="mega-link">
+        <span class="icon">🤝</span>
+        <div class="text">
+          <div class="title">Job Matching Tool</div>
+          <div class="desc">Match to new jobs via verified history.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+          <li><a href="#">Our Partners</a></li>
+          <li><a href="/about.html">About Us</a></li>
+
+          <li class="dropdown">
+  <a href="/service.html">Services</a>
+  <div class="dropdown-mega">
+    <div class="column">
+      <h4>Industries We Serve</h4>
+      <p>On-demand pay and workforce tools across key sectors.</p>
+      <hr class="dropdown-separator" />
+
+      <a href="/service/garments.html">Garments &amp; Textiles</a>
+      <a href="/service/tea.html">Tea Plantations</a>
+      <a href="/service/civil.html">Construction &amp; Civil Work</a>
+      <a href="/service/payroll.html">Manufacturing &amp; Light Industry</a>
+      <a href="/service/shop.html">Retail &amp; Small Enterprises</a>
+      <a href="/service/agri.html">Agriculture &amp; Rural Workforce</a>
+      <a href="/service/public.html">Public Sector &amp; Development Projects</a>
+    </div>
+
+    <div class="column">
+      <!-- Future content (case studies, CTA, etc.) -->
+    </div>
+  </div>
+</li>
+
+
+          <li class="dropdown">
+            <a href="#">Help</a>
+            <div class="dropdown-mega">
+              <div class="column">
+                <a href="#">PIN Reset</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Nagad Sheba</a>
+                <a href="#">Distributor locator</a>
+              </div>
+              <div class="column">
+                <a href="#">Limit and Charges</a>
+                <a href="#">Web Self Care</a>
+                <a href="#">Merchant locator</a>
+                <a href="#">Discontinued Uddokta</a>
+              </div>
+              <div class="column">
+                <a href="#">Nagad Transaction Calculator</a>
+                <a href="#">Virtual Number</a>
+                <a href="#">Uddokta locator</a>
+                <a href="#">Discontinued Distributor</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <div class="search-container">
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <style>
+    body {
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 100px;
+  font-family: 'Merriweather', serif;
+  color: #111;
+  max-width: 90%;
+  line-height: 1.6;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.article-section {
+  border: 1px solid #ddd;
+  padding: 20px 30px 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 50px;
+}
+
+.article-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+  color: #222;
+  text-align: center;
+}
+
+.article-section p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.article-section p.intro {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1.6rem;
+}
+
+.two-columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.two-columns div {
+  flex: 1 1 300px;
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+  min-width: 280px;
+}
+
+.article-section img {
+  max-width: 100%;
+  height: auto;
+  margin: 30px auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.article-section img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+    max-width: 100%;
+  }
+  
+  .article-section {
+    padding: 20px 25px 30px 25px;
+    margin-bottom: 40px;
+  }
+  
+  .article-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .two-columns {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .two-columns div {
+    min-width: 100%;
+  }
+  
+  .article-section p,
+  .article-section p.intro {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+  </style>
+
+
+<section class="article-section">
+  <h2>The Shopkeeper's Revolution: Bringing Digital Dignity to Bangladesh's Retail Frontier</h2>
+
+  <p class="intro">
+    Forget sprawling factories for a moment. Look closer. Down the dusty lane, in the cramped corner shop smelling of spices and soap. Inside the buzzing showroom for mobile phones, or at the neighbourhood bakery before dawn. This is the beating heart of Bangladesh's real economy: millions of small retailers and micro-enterprises. Here, the struggle isn't about massive export orders, but about daily survival, fierce competition, and a constant, grinding administrative headache. The owner—let's call him Rahim—is not just the boss. He is the accountant, the HR manager, the sales director, and the security guard. And his most persistent migraine? Figuring out who worked when, and how much to pay them.
+  </p>
+
+  <p>
+    <strong>The "Challan" Chaos: Life Before the Digital Shift</strong><br>
+    In Rahim's world, "payroll" is a dog-eared notebook, smudged with ink and calculation. "Attendance" is a memory test—did Ali come at 8 or 8:30 last Tuesday? Was it Fatima or Ayesha who took that half-day? Salaries are a cash bundle, handed over the counter after frantic mental math that subtracts advances for a family illness or a broken bicycle. It's a system built on trust and fraught with error.
+  </p>
+
+  <div class="two-columns">
+    <div>
+      <p><strong>For the Owner (Rahim):</strong> He loses hours each week to arithmetic. Disputes over hours poison his relationship with staff. He has no clear data to see if he's overstaffed on slow days or understaffed during rush hour. Cash flow is a mystery; one day he's short to pay the wholesaler because the payroll was bigger than he remembered.</p>
+      <p><strong>For the Worker (Ali):</strong> He feels anxiety. Is his boss remembering all his overtime? Will the casual "loan" he took last month be deducted fairly? He has no proof of his income, no record to show a bank for a small loan to fix his roof. His financial identity is invisible.</p>
+    </div>
+    <div>
+      <p>
+        This isn't just inefficiency. It's a cage of informality that keeps small businesses small and workers perpetually vulnerable. It is, in its DNA, the same system that has failed catastrophically on a larger scale elsewhere.
+      </p>
+    </div>
+  </div>
+
+  <img src="/assets/shopkeeper(1).png" alt="Small shop worker digital attendance" />
+
+  <p>
+    <strong>The Ghost in the System: The Tea Gardens and the Shadow Over All Work</strong><br>
+    To understand the profound importance of fixing Rahim's notebook, we must glance north, to the rolling tea estates of Sylhet and Moulvibazar. There, a workforce of over 150,000 lives in a time capsule of colonial-era exploitation. Their plight is the extreme, tragic endpoint of the informal, manual systems Rahim uses.
+  </p>
+
+  <p>
+    Tea workers are paid wages ranked among the lowest in the world. Their "payroll" is managed through opaque, estate-led ledgers. Deductions for housing, rations, and tools are often unclear. Overtime is frequently unrecorded or unpaid. They lack payslips, proper employment contracts, and any digital footprint of their economic existence. This deliberate obscurity is the tool of their disempowerment. They are not just poor; they are formally invisible, which makes advocacy for their rights an uphill battle against unverifiable claims.
+  </p>
+
+  <p>
+    The notebook in Rahim's shop, the ledger in the factory, and the estate manager's register in the tea garden are all branches of the same tree—a system where power resides in controlling the record, and where the worker's claim is always subject to the memory or mercy of the keeper. For Bangladesh to build a truly equitable economy, this tree must be uprooted, starting at its smallest saplings: the neighbourhood shops.
+  </p>
+
+  <div class="two-columns">
+    <div>
+      <p><strong>Why Digital Tools Are Not a Luxury, But a Lifeline</strong></p>
+      <p><strong>For the Small Enterprise:</strong> It’s a leap from chaos to control. A digital attendance tracker (even a simple app on Rahim's old smartphone) replaces the memory test. A cloud-based payroll system auto-calculates wages, overtime, and deductions. Rahim can forecast salary expenditure, see slow hours, and manage staff efficiently. Most importantly, he gets his time back to serve customers and grow the business.</p>
+    </div>
+    <div>
+      <p><strong>For the Retail Worker:</strong> It’s a foundation for dignity. A digital timestamp proves his presence. A generated payslip, sent to his phone via SMS or app, provides a record of income and access to financial services. Disputes are solved through transparent records, not memory or arguments.</p>
+    </div>
+  </div>
+
+  <img src="/assets/shopkeeper(2).png" alt="Digital payroll app for small business" />
+
+  <p>
+    <strong>How Pangolin Operates: The "Kirana Store" Toolkit</strong>
+  </p>
+
+  <div style="margin-left: 20px;">
+    <p><strong>Step 1: The On-Ramp - No Computer Needed.</strong> Rahim downloads the "Pangoin Sahayak" (Helper) app, registers his business with his trade license and phone number, and adds staff. Workers receive SMS links to download "Pangoin Shramik" (Worker) app.</p>
+    <p><strong>Step 2: Attendance - From Fingerprint to Face ID (Light).</strong> GPS-fenced check-in/out via worker phones, or low-cost biometric devices, record attendance. Shifts, part-time, and flexible hours are tracked in real-time.</p>
+    <p><strong>Step 3: Payroll - The Automated "Hisab".</strong> Wages, overtime, and approved deductions are auto-calculated. Bulk payments are triggered to workers’ bKash or Nagad accounts. Digital payslips are sent instantly to the Shramik app.</p>
+    <p><strong>Step 4: The Dashboard - The Shopkeeper's Control Room.</strong> Rahim sees labour costs, attendance patterns, overtime alerts, and can generate reports for records or micro-loan applications.</p>
+    <p><strong>Step 5: The Worker's Window - Transparency in the Palm.</strong> Ali sees digital timesheets, past payslips, and can raise queries on deductions directly in the app, shifting the power balance through shared visibility.</p>
+    <p><strong>Step 6: Scaling Simple - From Shop to Distribution Hub.</strong> For larger operations, the same system tracks multiple shifts, GPS-based check-ins, and payroll for dozens of staff with equal simplicity.</p>
+  </div>
+
+  <img src="/assets/shopkeeper(3).png" alt="Worker viewing digital payslip on mobile" />
+
+  <p>
+    <strong>The Ripple Effect: From Rahim's Shop to a New Social Contract</strong><br>
+    When Rahim adopts this system, he becomes a more stable, credible business. His workers become financially included citizens. Transparency replaces suspicion, forming the foundation of rights and respect. By digitising the small-scale informal economy, Bangladesh ensures the value created in every corner shop, showroom, and bakery is accounted for—not just in profit, but in the dignified worth of every worker.
+  </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Chatbot: Rollie -->
+<div class="chatbot-container" id="chatbot">
+  <div class="chatbot-header">
+    <span>Rollie 🤖</span>
+    <button id="chatbot-close">&times;</button>
+  </div>
+  <div class="chatbot-messages" id="chatbot-messages">
+    <div class="message bot">Hi! I’m Rollie, your assistant here.</div>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Type a message..." />
+    <button id="chatbot-send">➤</button>
+  </div>
+</div>
+
+<!-- Bot Icon -->
+<div id="chatbot-icon">
+  <img src="/assets/bot.png" alt="Chatbot Icon" height="100px"/>
+</div>
+
+<script src="/chatbot.js"></script>
+
+
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="/assets/logo.png" alt="Pangolin Logo" class="footer-logo" />
+      <p><strong>Pangolin HQ</strong><br>
+      Savar, Dhaka<br>
+      Bangladesh</p>
+      <a href="/contact.html" class="footer-contact">Contact us ></a>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <a href="/about.html">About Us</a>
+        <a href="#">Impact</a>
+        <a href="#">Careers</a>
+        <a href="#">Awards</a>
+        <a href="#">Security</a>
+      </div>
+      <div>
+        <h4>For Employers</h4>
+        <a href="#">Overview</a>
+        <a href="#">Why Pangolin</a>
+        <a href="#">Clients</a>
+        <a href="#">Integrations</a>
+      </div>
+      <div>
+        <h4>Platform & Features</h4>
+        <a href="#">Pangolin Platform</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Blog</a>
+        <a href="#">On-Demand Pay</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pangolin</title>
+  <link rel="icon" type="image/png" href="/assets/hlogo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/chatbot.css" />
+  <link rel="stylesheet" href="/nav.css" />
+  <link rel="stylesheet" href="/footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+  <script src="/nav.js"></script>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/index.html" class="logo-link">
+          <img src="/assets/logo.png" alt="Logo" height="50" />
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Nav + Search wrapper -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+<li class="dropdown">
+  <a href="/solution.html">Solutions</a>
+  <div class="dropdown-mega solutions-mega">
+    <div class="column">
+      <h4>Platform Features</h4>
+
+      <a href="/wage.html" class="mega-link">
+        <span class="icon">💸</span>
+        <div class="text">
+          <div class="title">On-Time Wage Access</div>
+          <div class="desc">Digitally disburse wages directly.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-2" class="mega-link">
+        <span class="icon">🚑</span>
+        <div class="text">
+          <div class="title">Emergency Microloans</div>
+          <div class="desc">Low-interest loans via the app.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-3" class="mega-link">
+        <span class="icon">📅</span>
+        <div class="text">
+          <div class="title">Digital Leave Requests</div>
+          <div class="desc">Leave requests without fear or bias.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="column">
+      <h4>Productivity & Trust</h4>
+
+      <a href="/solution.html#feature-4" class="mega-link">
+        <span class="icon">⏱️</span>
+        <div class="text">
+          <div class="title">Attendance Tracking</div>
+          <div class="desc">QR or biometric clock-ins, real-time logs.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-5" class="mega-link">
+        <span class="icon">🏪</span>
+        <div class="text">
+          <div class="title">Cash-Out via Local Vendors</div>
+          <div class="desc">Withdraw wages without high fees.</div>
+        </div>
+      </a>
+
+      <a href="/solution.html#feature-6" class="mega-link">
+        <span class="icon">🤝</span>
+        <div class="text">
+          <div class="title">Job Matching Tool</div>
+          <div class="desc">Match to new jobs via verified history.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+          <li><a href="#">Our Partners</a></li>
+          <li><a href="/about.html">About Us</a></li>
+
+          <li class="dropdown">
+  <a href="/service.html">Services</a>
+  <div class="dropdown-mega">
+    <div class="column">
+      <h4>Industries We Serve</h4>
+      <p>On-demand pay and workforce tools across key sectors.</p>
+      <hr class="dropdown-separator" />
+
+      <a href="/service/garments.html">Garments &amp; Textiles</a>
+      <a href="/service/tea.html">Tea Plantations</a>
+      <a href="/service/civil.html">Construction &amp; Civil Work</a>
+      <a href="/service/payroll.html">Manufacturing &amp; Light Industry</a>
+      <a href="/service/shop.html">Retail &amp; Small Enterprises</a>
+      <a href="/service/agri.html">Agriculture &amp; Rural Workforce</a>
+      <a href="/service/public.html">Public Sector &amp; Development Projects</a>
+    </div>
+
+    <div class="column">
+      <!-- Future content (case studies, CTA, etc.) -->
+    </div>
+  </div>
+</li>
+
+
+          <li class="dropdown">
+            <a href="#">Help</a>
+            <div class="dropdown-mega">
+              <div class="column">
+                <a href="#">PIN Reset</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Nagad Sheba</a>
+                <a href="#">Distributor locator</a>
+              </div>
+              <div class="column">
+                <a href="#">Limit and Charges</a>
+                <a href="#">Web Self Care</a>
+                <a href="#">Merchant locator</a>
+                <a href="#">Discontinued Uddokta</a>
+              </div>
+              <div class="column">
+                <a href="#">Nagad Transaction Calculator</a>
+                <a href="#">Virtual Number</a>
+                <a href="#">Uddokta locator</a>
+                <a href="#">Discontinued Distributor</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <div class="search-container">
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+  <style>
+    body {
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 100px;
+  font-family: 'Merriweather', serif;
+  color: #111;
+  max-width: 90%;
+  line-height: 1.6;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.article-section {
+  border: 1px solid #ddd;
+  padding: 20px 30px 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 50px;
+}
+
+.article-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+  color: #222;
+  text-align: center;
+}
+
+.article-section p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.article-section p.intro {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1.6rem;
+}
+
+.two-columns {
+  display: flex;
+  gap: 40px;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.two-columns div {
+  flex: 1 1 300px;
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  line-height: 1.6;
+  min-width: 280px;
+}
+
+.article-section img {
+  max-width: 100%;
+  height: auto;
+  margin: 30px auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.article-section img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+    max-width: 100%;
+  }
+  
+  .article-section {
+    padding: 20px 25px 30px 25px;
+    margin-bottom: 40px;
+  }
+  
+  .article-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .two-columns {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .two-columns div {
+    min-width: 100%;
+  }
+  
+  .article-section p,
+  .article-section p.intro {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+  </style>
+
+
+
+<section class="article-section">
+  <h2>Construction & Civil Work: Attendance Tracking, On-Time Wages, and Worker Protection</h2>
+
+  <p class="intro">
+    Construction and civil work are among the most labor-intensive sectors in Bangladesh, employing millions of day laborers who build roads, bridges, buildings, factories, and urban infrastructure. Despite being essential to national development, construction workers remain one of the most underprivileged and economically insecure groups in the country. Their labor sustains cities and industries, yet their lives are shaped by uncertainty, informal employment, and chronic wage instability.
+  </p>
+
+  <p>
+    Most construction workers in Bangladesh are hired on a daily or short-term basis through contractors or sub-contractors. Employment agreements are verbal, with no written contracts, no guaranteed number of working days, and no formal wage protection. Workers often gather at hiring points early in the morning, hoping to be selected for a day’s work. If selected, they may work long hours under physically demanding and hazardous conditions, only to be paid later, partially, or sometimes not at all.
+  </p>
+
+  <img src="/assets/00004.png" alt="Construction workers at a building site in Bangladesh" width="350" />
+
+  <div class="two-columns">
+    <div>
+      <p>
+        Attendance tracking at construction sites is largely informal. Supervisors or sardars mentally note who worked, for how long, and on which days. In busy sites with dozens or hundreds of workers, mistakes are common. Disputes frequently arise over missing workdays, unpaid overtime, or sudden deductions. Because workers have no documented proof of attendance, they are rarely able to challenge these discrepancies. This power imbalance consistently favors contractors and site managers.
+      </p>
+      <p>
+        Wage delays are a defining problem in the construction sector. Payments are often postponed due to delayed project funding, cash flow shortages at the contractor level, or mismanagement. Workers are typically paid weekly or after certain phases of work are completed. When payments are delayed, workers absorb the full impact. Daily survival expenses such as food, rent, and transport cannot be postponed, forcing workers to borrow money at high interest from informal lenders.
+      </p>
+    </div>
+    <div>
+      <p>
+        Construction workers also face frequent workplace injuries due to unsafe conditions. Helmets, harnesses, and safety training are often inadequate or absent. When injuries occur, workers lose income immediately. Medical expenses are usually paid out of pocket, pushing families into deeper financial distress. Without savings or insurance, even minor injuries can have long-term economic consequences.
+      </p>
+      <p>
+        Migrant workers are especially vulnerable. Many construction laborers migrate from rural districts to cities such as Dhaka, Gazipur, Narayanganj, and Chattogram. They are separated from family support systems and often lack local identification or stable housing. Their dependence on contractors for both employment and payment increases the risk of abuse and wage manipulation.
+      </p>
+    </div>
+  </div>
+  <img src="/assets/hero1.jpg" alt="Construction workforce management dashboard" width="350" />
+  
+
+  <p>
+    Pangolin is designed to operate within this complex and informal labor environment while introducing structure, transparency, and accountability. Its primary focus is to track attendance accurately, automate payments, and prevent wage delays for day laborers without imposing burdensome requirements on workers or employers.
+  </p>
+  <p>
+    Attendance tracking through Pangolin is adapted to construction site realities. Workers can check in using QR codes placed at the site, shared devices managed by supervisors, or simple mobile verification methods. This ensures that each worker’s presence is recorded daily with time stamps. Attendance data is stored digitally, reducing disputes and eliminating reliance on memory or handwritten notes.
+  </p>
+
+
+  <div class="two-columns">
+    <div>
+      <p>
+        Once attendance is recorded, Pangolin automates wage calculations based on agreed daily rates, overtime hours, or task-based payments. This system removes ambiguity around earnings. Workers know exactly how much they have earned and for which days. Employers benefit from clear, organized payroll records that reduce errors and administrative overhead.
+      </p>
+      <p>
+        Preventing wage delays is central to Pangolin’s operation. Instead of allowing workers to suffer when contractors face short-term liquidity problems, Pangolin enables structured wage disbursement mechanisms. Payments can be scheduled and released automatically, ensuring continuity even when upstream payments are delayed. This shields workers from financial instability caused by factors beyond their control.
+      </p>
+    </div>
+    <div>
+      <p>
+        For workers without bank accounts, Pangolin supports hybrid cash-out systems through verified local vendors or agents. Workers can withdraw wages safely and transparently without relying on site supervisors to distribute cash. Each transaction is logged, creating a traceable record that protects both workers and employers.
+      </p>
+      <p>
+        Recordkeeping is another critical function. Pangolin maintains a continuous employment history for workers, even as they move between sites or employers. Attendance records, wage history, and payment logs remain accessible. This documentation helps workers prove experience, negotiate fairer wages, and reduce dependency on informal intermediaries.
+      </p>
+    </div>
+  </div>
+
+  <img src="/assets/hero3.jpg" alt="Digital attendance and payroll at construction site" width="350" />
+
+  <p>
+    From a management perspective, Pangolin provides real-time visibility into workforce operations. Employers and contractors can monitor attendance trends, labor costs, and productivity across multiple sites. This improves planning, reduces unexpected labor shortages, and helps identify inefficiencies early.
+  </p>
+  <p>
+    Compliance and accountability are increasingly important in construction projects, particularly those involving public infrastructure or international financing. Pangolin’s digital records support compliance with labor standards, audit requirements, and reporting obligations. This reduces legal and reputational risks for companies operating in a traditionally informal sector.
+  </p>
+  <p>
+    Productivity is directly linked to trust. When workers trust that their attendance is recorded accurately and their wages will be paid on time, motivation improves. Absenteeism declines, turnover decreases, and work quality improves. Pangolin strengthens this trust by replacing uncertainty with predictable systems.
+  </p>
+  <p>
+    Pangolin does not attempt to eliminate the flexibility inherent in construction work. Daily hiring, multiple contractors, and mobile worksites remain intact. Instead, it formalizes the most critical elements that protect workers while enhancing operational efficiency for employers.
+  </p>
+  <p>
+    In the Bangladeshi context, where construction workers face vulnerabilities similar to tea plantation workers, Pangolin introduces a system that recognizes labor as measurable, valuable, and deserving of timely payment. By tracking attendance, automating payments, and preventing wage delays, Pangolin addresses the structural issues that keep day laborers trapped in cycles of insecurity.
+  </p>
+  <p>
+    Through this approach, Pangolin aligns the interests of workers and employers. Workers gain dignity, income stability, and transparency. Employers gain efficiency, compliance, and a more reliable workforce. The result is a construction sector that functions more fairly, productively, and sustainably for everyone involved.
+  </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Chatbot: Rollie -->
+<div class="chatbot-container" id="chatbot">
+  <div class="chatbot-header">
+    <span>Rollie 🤖</span>
+    <button id="chatbot-close">&times;</button>
+  </div>
+  <div class="chatbot-messages" id="chatbot-messages">
+    <div class="message bot">Hi! I’m Rollie, your assistant here.</div>
+  </div>
+  <div class="chatbot-input-area">
+    <input type="text" id="chatbot-input" placeholder="Type a message..." />
+    <button id="chatbot-send">➤</button>
+  </div>
+</div>
+
+<!-- Bot Icon -->
+<div id="chatbot-icon">
+  <img src="/assets/bot.png" alt="Chatbot Icon" height="100px"/>
+</div>
+
+<script src="/chatbot.js"></script>
+
+
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="/assets/logo.png" alt="Pangolin Logo" class="footer-logo" />
+      <p><strong>Pangolin HQ</strong><br>
+      Savar, Dhaka<br>
+      Bangladesh</p>
+      <a href="/contact.html" class="footer-contact">Contact us ></a>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <a href="/about.html">About Us</a>
+        <a href="#">Impact</a>
+        <a href="#">Careers</a>
+        <a href="#">Awards</a>
+        <a href="#">Security</a>
+      </div>
+      <div>
+        <h4>For Employers</h4>
+        <a href="#">Overview</a>
+        <a href="#">Why Pangolin</a>
+        <a href="#">Clients</a>
+        <a href="#">Integrations</a>
+      </div>
+      <div>
+        <h4>Platform & Features</h4>
+        <a href="#">Pangolin Platform</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Blog</a>
+        <a href="#">On-Demand Pay</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/script.js"></script>
+</body>
+</html>

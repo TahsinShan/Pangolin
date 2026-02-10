@@ -4,25 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pangolin</title>
-  <link rel="icon" type="image/png" href="assets/hlogo.jpg" />
+  <link rel="icon" type="image/png" href="/assets/hlogo.jpg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="chatbot.css" />
-  <link rel="stylesheet" href="nav.css" />
-  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="/chatbot.css" />
+  <link rel="stylesheet" href="/nav.css" />
+  <link rel="stylesheet" href="/footer.css" />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 
 </head>
 <body>
-  <script src="nav.js"></script>
+  <script src="/nav.js"></script>
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
       <!-- Logo -->
       <div class="logo">
-        <a href="index.html" class="logo-link">
-          <img src="assets/logo.png" alt="Logo" height="50" />
+        <a href="/index.html" class="logo-link">
+          <img src="/assets/logo.png" alt="Logo" height="50" />
         </a>
       </div>
 
@@ -36,14 +36,14 @@
       <!-- Nav + Search wrapper -->
       <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/index.html">Home</a></li>
 <li class="dropdown">
-  <a href="solution.html">Solutions</a>
+  <a href="/solution.html">Solutions</a>
   <div class="dropdown-mega solutions-mega">
     <div class="column">
       <h4>Platform Features</h4>
 
-      <a href="wage.html" class="mega-link">
+      <a href="/wage.html" class="mega-link">
         <span class="icon">💸</span>
         <div class="text">
           <div class="title">On-Time Wage Access</div>
@@ -51,7 +51,7 @@
         </div>
       </a>
 
-      <a href="solution.html#feature-2" class="mega-link">
+      <a href="/solution.html#feature-2" class="mega-link">
         <span class="icon">🚑</span>
         <div class="text">
           <div class="title">Emergency Microloans</div>
@@ -59,7 +59,7 @@
         </div>
       </a>
 
-      <a href="solution.html#feature-3" class="mega-link">
+      <a href="/solution.html#feature-3" class="mega-link">
         <span class="icon">📅</span>
         <div class="text">
           <div class="title">Digital Leave Requests</div>
@@ -71,7 +71,7 @@
     <div class="column">
       <h4>Productivity & Trust</h4>
 
-      <a href="solution.html#feature-4" class="mega-link">
+      <a href="/solution.html#feature-4" class="mega-link">
         <span class="icon">⏱️</span>
         <div class="text">
           <div class="title">Attendance Tracking</div>
@@ -79,7 +79,7 @@
         </div>
       </a>
 
-      <a href="solution.html#feature-5" class="mega-link">
+      <a href="/solution.html#feature-5" class="mega-link">
         <span class="icon">🏪</span>
         <div class="text">
           <div class="title">Cash-Out via Local Vendors</div>
@@ -87,7 +87,7 @@
         </div>
       </a>
 
-      <a href="solution.html#feature-6" class="mega-link">
+      <a href="/solution.html#feature-6" class="mega-link">
         <span class="icon">🤝</span>
         <div class="text">
           <div class="title">Job Matching Tool</div>
@@ -101,29 +101,30 @@
 
 
           <li><a href="#">Our Partners</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="/about.html">About Us</a></li>
 
           <li class="dropdown">
-  <a href="#">Services</a>
+  <a href="/service.html">Services</a>
   <div class="dropdown-mega">
     <div class="column">
-      <h4>Overview</h4>
-      <p>Learn how to support industries with On-Demand Pay.</p>
+      <h4>Industries We Serve</h4>
+      <p>On-demand pay and workforce tools across key sectors.</p>
       <hr class="dropdown-separator" />
-      <a href="#">Hospitals & Healthcare</a>
-      <a href="#">Retail</a>
-      <a href="#">Restaurants & QSR</a>
-      <a href="#">Travel & Hospitality</a>
-      <a href="#">Franchise</a>
-      <a href="#">Grocers & Supermarkets</a>
-      <a href="#">Call & Contact Centers</a>
-      <a href="#">Manufacturing</a>
-      <a href="#">Public Sector</a>
+
+      <a href="/service/garments.html">Garments &amp; Textiles</a>
+      <a href="/service/tea.html">Tea Plantations</a>
+      <a href="/service/civil.html">Construction &amp; Civil Work</a>
+      <a href="/service/payroll.html">Manufacturing &amp; Light Industry</a>
+      <a href="/service/shop.html">Retail &amp; Small Enterprises</a>
+      <a href="/service/agri.html">Agriculture &amp; Rural Workforce</a>
+      <a href="/service/public.html">Public Sector &amp; Development Projects</a>
     </div>
-    <div class="column"></div>
+
+    <div class="column">
+      <!-- Future content (case studies, CTA, etc.) -->
+    </div>
   </div>
 </li>
-
 
 
           <li class="dropdown">
@@ -161,6 +162,7 @@
 
 
 
+
   <style>
     body {
   background-color: white;
@@ -168,7 +170,7 @@
   padding-top: 100px;
   font-family: 'Merriweather', serif;
   color: #111;
-  max-width: 800px;
+  max-width: 90%;
   line-height: 1.6;
   padding-left: 15px;
   padding-right: 15px;
@@ -177,7 +179,7 @@
 
 .article-section {
   border: 1px solid #ddd;
-  padding: 30px 40px 40px 40px;
+  padding: 20px 30px 30px 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   border-radius: 8px;
   background: #fff;
@@ -289,7 +291,7 @@
       On-Time Wage Access is a payroll system that guarantees workers receive their salaries on the exact day promised, without hidden cuts or manipulation. Instead of wages being passed through layers of supervisors or middlemen who often delay or skim from payments, salaries flow directly from a company’s bank account into each worker’s digital Pangolin wallet. From there, workers can withdraw cash through local vendors, pay bills digitally, or keep funds safely stored. The system reduces dependency on cash transactions, increases transparency, and ensures that the hard-earned money reaches the right hands without interference.
     </p>
 
-    <img src="assets/wage(1).png" alt="Workers in Bangladesh" />
+    <img src="/assets/00009.png" alt="Workers in Bangladesh" width="350"/>
 
     <div class="two-columns">
       <div>
@@ -310,7 +312,7 @@
       </div>
     </div>
 
-    <img src="assets/wage(2).png" alt="Digital payment using Pangolin wallet" />
+    <img src="/assets/hero4.png" alt="Digital payment using Pangolin wallet" width="300" />
 
     <p>
       The urgency of On-Time Wage Access is especially clear in Bangladesh. Over 4 million people work in the garment sector alone, producing clothing for some of the world’s biggest brands. Yet reports of wage delays and disputes are common. Workers often line up for hours to receive cash payments, which exposes them to the risk of theft and requires costly logistics on the part of factories.
@@ -319,7 +321,7 @@
       In tea plantations and day-labor sectors, informal systems of cash disbursement often lack accountability. Workers at the bottom of the pyramid end up paying the price for inefficiencies at the top. By digitizing wage flows, Pangolin reduces the space for exploitation and ensures fairness in a system that has historically been stacked against the vulnerable.
     </p>
 
-    <img src="assets/wage(3).png" alt="Factory workers at work" />
+    <img src="/assets/00008.png" alt="Factory workers at work"  width="300"/>
 
     <p>
       Beyond wages, digital access opens new doors for financial inclusion. Once salaries are deposited into Pangolin wallets, workers gain a foothold in the digital economy. They can access emergency microloans at ethical interest rates, save money securely, and use digital tools for household management. For many, this is the first step toward formal financial services.
@@ -328,7 +330,6 @@
       This kind of inclusion is critical in a country where a large share of the labor force remains unbanked. Traditional banks are often inaccessible for workers due to distance, fees, and documentation requirements. Pangolin bridges that gap by meeting workers where they are, through local vendors and simple mobile access.
     </p>
 
-    <img src="assets/wage(4).png" alt="Tea plantation workers in Bangladesh" />
 
     <p>
       On-Time Wage Access is more than just a payroll tool. It is part of a broader movement to ensure fairness, dignity, and empowerment for the people who keep Bangladesh’s industries alive. By addressing a fundamental pain point — wage insecurity — Pangolin helps both workers and companies build a relationship rooted in trust.
@@ -367,10 +368,10 @@
 
 <!-- Bot Icon -->
 <div id="chatbot-icon">
-  <img src="assets/bot.png" alt="Chatbot Icon" height="100px"/>
+  <img src="/assets/bot.png" alt="Chatbot Icon" height="100px"/>
 </div>
 
-<script src="chatbot.js"></script>
+<script src="/chatbot.js"></script>
 
 
 
@@ -378,11 +379,11 @@
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="assets/logo.png" alt="Pangolin Logo" class="footer-logo" />
+      <img src="/assets/logo.png" alt="Pangolin Logo" class="footer-logo" />
       <p><strong>Pangolin HQ</strong><br>
       Savar, Dhaka<br>
       Bangladesh</p>
-      <a href="#" class="footer-contact">Contact us ></a>
+      <a href="/contact.html" class="footer-contact">Contact us ></a>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-x-twitter"></i></a>
@@ -395,7 +396,7 @@
     <div class="footer-links">
       <div>
         <h4>Company</h4>
-        <a href="about.html">About Us</a>
+        <a href="/about.html">About Us</a>
         <a href="#">Impact</a>
         <a href="#">Careers</a>
         <a href="#">Awards</a>
@@ -406,21 +407,15 @@
         <a href="#">Overview</a>
         <a href="#">Why Pangolin</a>
         <a href="#">Clients</a>
-        <a href="#">Industries</a>
         <a href="#">Integrations</a>
       </div>
       <div>
         <h4>Platform & Features</h4>
         <a href="#">Pangolin Platform</a>
-        <a href="#">Cycle</a>
-        <a href="#">Reward</a>
-        <a href="#">Tips</a>
       </div>
       <div>
         <h4>Resources</h4>
         <a href="#">Blog</a>
-        <a href="#">Calculator</a>
-        <a href="#">Education</a>
         <a href="#">On-Demand Pay</a>
         <a href="#">Support</a>
       </div>
@@ -428,7 +423,6 @@
   </div>
 </footer>
 
-
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
