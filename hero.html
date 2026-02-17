@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pangolin</title>
+  <link rel="icon" type="image/png" href="assets/hlogo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="chatbot.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="footer.css" />
+
+
+
+
+
+<style>
+:root {
+    --navy: #0A1F44;
+    --orange: #F47A20;
+    --gray-text: #555;
+    --light-gray: #f4f6f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--navy);
+    line-height: 1.75;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: auto;
+    padding: 80px 0;
+}
+
+/* HERO */
+header {
+    text-align: center;
+    padding: 20px 20px 80px;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.15rem;
+    color: var(--gray-text);
+    max-width: 750px;
+    margin: auto;
+}
+
+/* SECTION STYLING */
+section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: var(--orange);
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 18px;
+    color: var(--gray-text);
+}
+
+ul {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: var(--gray-text);
+}
+
+.highlight {
+    background-color: var(--light-gray);
+    padding: 25px;
+    border-left: 4px solid var(--orange);
+    border-radius: 6px;
+    margin: 30px 0;
+}
+
+/* CTA */
+.cta {
+    background: var(--light-gray);
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta button {
+    padding: 14px 30px;
+    border: none;
+    background-color: var(--navy);
+    color: white;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: var(--orange);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    border-top: 1px solid #eee;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2rem;
+    }
+}
+</style>
+
+
+
+
+  
+</head>
+<body>
+  <script src="nav.js"></script>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img src="assets/logo.png" alt="Logo" height="50" />
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Nav + Search wrapper -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+<li class="dropdown">
+  <a href="solution.html">Solutions</a>
+  <div class="dropdown-mega solutions-mega">
+    <div class="column">
+      <h4>Platform Features</h4>
+
+      <a href="solution/wage.html" class="mega-link">
+        <span class="icon">💸</span>
+        <div class="text">
+          <div class="title">On-Time Wage Access</div>
+          <div class="desc">Digitally disburse wages directly.</div>
+        </div>
+      </a>
+
+      <a href="solution.html#feature-2" class="mega-link">
+        <span class="icon">🚑</span>
+        <div class="text">
+          <div class="title">Emergency Microloans</div>
+          <div class="desc">Low-interest loans via the app.</div>
+        </div>
+      </a>
+
+      <a href="solution.html#feature-3" class="mega-link">
+        <span class="icon">📅</span>
+        <div class="text">
+          <div class="title">Digital Leave Requests</div>
+          <div class="desc">Leave requests without fear or bias.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="column">
+      <h4>Productivity & Trust</h4>
+
+      <a href="solution.html#feature-4" class="mega-link">
+        <span class="icon">⏱️</span>
+        <div class="text">
+          <div class="title">Attendance Tracking</div>
+          <div class="desc">QR or biometric clock-ins, real-time logs.</div>
+        </div>
+      </a>
+
+      <a href="solution.html#feature-5" class="mega-link">
+        <span class="icon">🏪</span>
+        <div class="text">
+          <div class="title">Cash-Out via Local Vendors</div>
+          <div class="desc">Withdraw wages without high fees.</div>
+        </div>
+      </a>
+
+      <a href="solution.html#feature-6" class="mega-link">
+        <span class="icon">🤝</span>
+        <div class="text">
+          <div class="title">Job Matching Tool</div>
+          <div class="desc">Match to new jobs via verified history.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</li>
+
+
+
+          <li><a href="#">Our Partners</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+<li class="dropdown">
+  <a href="service.html">Services</a>
+  <div class="dropdown-mega">
+    <div class="column">
+      <h4>Industries We Serve</h4>
+      <p>On-demand pay and workforce tools across key sectors.</p>
+      <hr class="dropdown-separator" />
+
+      <a href="service/garments.html">Garments &amp; Textiles</a>
+      <a href="service/tea.html">Tea Plantations</a>
+      <a href="service/civil.html">Construction &amp; Civil Work</a>
+      <a href="service/payroll.html">Manufacturing &amp; Light Industry</a>
+      <a href="service/shop.html">Retail &amp; Small Enterprises</a>
+      <a href="service/agri.html">Agriculture &amp; Rural Workforce</a>
+      <a href="/service/public.html">Public Sector &amp; Development Projects</a>
+    </div>
+
+    <div class="column">
+      <!-- Future content (case studies, CTA, etc.) -->
+    </div>
+  </div>
+</li>
+
+
+
+
+          <li class="dropdown">
+            <a href="#">Help</a>
+            <div class="dropdown-mega">
+              <div class="column">
+                <a href="#">PIN Reset</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Nagad Sheba</a>
+                <a href="#">Distributor locator</a>
+              </div>
+              <div class="column">
+                <a href="#">Limit and Charges</a>
+                <a href="#">Web Self Care</a>
+                <a href="#">Merchant locator</a>
+                <a href="#">Discontinued Uddokta</a>
+              </div>
+              <div class="column">
+                <a href="#">Nagad Transaction Calculator</a>
+                <a href="#">Virtual Number</a>
+                <a href="#">Uddokta locator</a>
+                <a href="#">Discontinued Distributor</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <div class="search-container">
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+ 
+<header>
+    <h1>How Pangolin Works</h1>
+    <p>
+        Delivering Fair Pay and Financial Dignity to Bangladesh’s Frontline Workers — 
+        Where Worker Dignity Meets Managerial Precision.
+    </p>
+</header>
+
+<div class="container">
+
+<section>
+<p>
+In the bustling industrial heartlands of Bangladesh, a quiet revolution is unfolding. 
+For millions of garment workers, tea plantation laborers, and civil workers, the end of the month has traditionally been a time of anxiety — delayed wages, unexplained deductions, and financial inaccessibility.
+</p>
+
+<p>
+Pangolin was built to change this reality. It is a digital wage and microfinance platform designed to ensure one simple principle:
+</p>
+
+<div class="highlight">
+    “Wages on Time, Every Time.”
+</div>
+</section>
+
+<section>
+<h2>The Foundation: A Two-Sided Platform for Trust</h2>
+
+<p>
+At its core, Pangolin bridges the critical gap between employers and workers, creating transparency where opacity once dominated.
+</p>
+
+<h3>For the Factory or Company</h3>
+<ul>
+    <li>Web-based SaaS dashboard onboarding</li>
+    <li>Payroll automation with compliant salary calculation</li>
+    <li>QR code or biometric attendance tracking</li>
+    <li>Leave management & HR processing</li>
+    <li>Automated overtime, bonus, and lawful deductions</li>
+</ul>
+
+<p>
+This replaces manual ledgers prone to error and exploitation with structured, auditable systems.
+</p>
+
+<h3>For the Worker</h3>
+<p>
+Workers access Pangolin through a simple mobile app. No traditional bank account is required. The app functions as their digital financial hub.
+</p>
+</section>
+
+<section>
+<h2>The Engine: The Digital Wage Disbursement Cycle</h2>
+
+<h3>1. Attendance & Tracking</h3>
+<p>
+Workers clock in via QR scan or biometric terminal. Data flows instantly into both the management dashboard and the worker’s app.
+</p>
+
+<h3>2. Salary Lock & Transparency</h3>
+<p>
+Before payday, workers see a complete salary breakdown:
+</p>
+<ul>
+    <li>Base salary</li>
+    <li>Overtime hours</li>
+    <li>Bonuses</li>
+    <li>Deductions (with reasons)</li>
+    <li>Net payable amount</li>
+</ul>
+
+<p>
+This eliminates “black box” surprises.
+</p>
+
+<h3>3. Digital Transfer</h3>
+<p>
+On payday, salaries are digitally transferred into each worker’s Pangolin Wallet — instantly accessible.
+</p>
+</section>
+
+<section>
+<h2>The Lifeline: Embedded Ethical Microfinance</h2>
+
+<h3>AI-Driven Eligibility</h3>
+<p>
+Loan limits are responsibly calculated based on salary history, attendance, and repayment behavior.
+</p>
+
+<h3>Instant Ethical Access</h3>
+<p>
+Workers apply in-app. Funds are disbursed within minutes at fair interest rates.
+</p>
+
+<h3>Stress-Free Repayment</h3>
+<p>
+Repayments are automatically deducted in small increments from future salaries.
+</p>
+</section>
+
+<section>
+<h2>The Bridge to Cash: Local Vendor Network</h2>
+<p>
+Recognizing the hybrid nature of Bangladesh’s economy, Pangolin built a trusted vendor network.
+</p>
+<ul>
+    <li>Worker generates secure cash-out code</li>
+    <li>Vendor processes through Vendor App</li>
+    <li>Worker receives full salary amount (no deduction fees)</li>
+</ul>
+</section>
+
+<section>
+<h2>The Manager’s Dashboard: Unified Operations</h2>
+
+<h3>Task & Workflow Management</h3>
+<ul>
+    <li>Daily/weekly production targets</li>
+    <li>Line-level task tracking</li>
+    <li>Completion logs & performance reports</li>
+</ul>
+
+<h3>Structured Communication</h3>
+<ul>
+    <li>Logged announcements</li>
+    <li>Issue reporting with photo uploads</li>
+    <li>Maintenance ticket routing</li>
+</ul>
+
+<h3>HR Lifecycle Management</h3>
+<ul>
+    <li>Digital job postings & recruitment tracking</li>
+    <li>Onboarding automation</li>
+    <li>Master Employee Files</li>
+    <li>Performance records</li>
+</ul>
+</section>
+
+<section>
+<h2>Strategic Insights & Proactive Management</h2>
+<ul>
+    <li>Factory productivity dashboards</li>
+    <li>Absenteeism trend tracking</li>
+    <li>Overtime cost monitoring</li>
+    <li>Turnover analytics</li>
+    <li>Proactive alert systems</li>
+</ul>
+</section>
+
+<section>
+<h2>The Ripple Effect</h2>
+<p>
+In the Excel Exclusive pilot:
+</p>
+<ul>
+    <li>Salary delays reduced from 12 days to zero</li>
+    <li>95% worker retention</li>
+    <li>70% microloan usage</li>
+    <li>Digital Eid bonus disbursement</li>
+</ul>
+
+<p>
+Trust increased. Productivity stabilized. Financial dignity was restored.
+</p>
+</section>
+
+<section>
+<h2>Why It Works</h2>
+<div class="highlight">
+Pangolin is not a foreign fintech overlay. It is a locally-grown architecture of dignity.
+</div>
+
+<p>
+By integrating digital wages, ethical credit, operational intelligence, and human-centric design into one seamless ecosystem, Pangolin restores agency to workers and control to management.
+</p>
+
+<p>
+It proves that technology, when thoughtfully applied, can become a force for justice — beginning with the right to be paid fairly and on time.
+</p>
+</section>
+
+</div>
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="/assets/logo.png" alt="Pangolin Logo" class="footer-logo" />
+      <p><strong>Pangolin HQ</strong><br>
+      Savar, Dhaka<br>
+      Bangladesh</p>
+      <a href="/contact.html" class="footer-contact">Contact us ></a>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <a href="/about.html">About Us</a>
+        <a href="#">Impact</a>
+        <a href="#">Careers</a>
+        <a href="#">Awards</a>
+        <a href="#">Security</a>
+      </div>
+      <div>
+        <h4>For Employers</h4>
+        <a href="#">Overview</a>
+        <a href="#">Why Pangolin</a>
+        <a href="#">Clients</a>
+        <a href="#">Integrations</a>
+      </div>
+      <div>
+        <h4>Platform & Features</h4>
+        <a href="#">Pangolin Platform</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Blog</a>
+        <a href="#">On-Demand Pay</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
